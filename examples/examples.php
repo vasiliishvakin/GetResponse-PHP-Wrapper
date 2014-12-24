@@ -1,7 +1,7 @@
 <?php
 
 require_once('GetResponseAPI.class.php');
-$api = new GetResponse('YOUR_API_KEY');
+$api = new GetResponseApi('YOUR_API_KEY');
 
 // Connection Testing
 $ping = $api->ping();

@@ -1,5 +1,7 @@
 <?php
 
+namespace GetResponseApi;
+
 /**
  * GetResponsePHP is a PHP5 implementation of the GetResponse API
  * @internal This wrapper is incomplete and subject to change.
@@ -14,7 +16,7 @@
  * GetResponse Class
  * @package GetResponsePHP
  */
-class GetResponse
+class GetResponseApi
 {	
 	/**
 	 * GetResponse API key

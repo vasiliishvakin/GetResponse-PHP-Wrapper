@@ -1,0 +1,16 @@
+{
+    "name": "orbisnull/get-response-api",
+    "authors": [
+        {
+            "name": "orbisnull",
+            "email": "zen4dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "GetResponseApi": "src/"
+        }
+    },
+    "require": {}
+}
