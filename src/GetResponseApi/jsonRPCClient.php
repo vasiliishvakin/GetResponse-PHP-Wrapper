@@ -8,6 +8,9 @@
  * @author Kacper Rowinski <krowinski@implix.com>
  * http://implix.com
  */
+
+namespace GetResponseApi;
+
 class jsonRPCClient
 {
     protected $url = null, $is_debug = false, $parameters_structure = 'array';
