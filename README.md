@@ -18,3 +18,8 @@ Shashank Agarwal<br />
 shashank@thegeeklabs.com<br />
 http://thegeeklabs.com<br/>
 https://github.com/imshashank<br/>
+
+#IMPORTANT NOTICE
+
+All previous documentations were moved and are now available here:
+[http://apidocs.getresponse.com](http://apidocs.getresponse.com)
