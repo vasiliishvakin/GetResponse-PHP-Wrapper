@@ -8,9 +8,11 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-0": {
-            "GetResponseApi": "src/"
-        }
+      "psr-0": {
+        "GetResponseApi": "src/"
+      }
+    },
+    "require": {
+        "soundasleep/html2text" : "dev-master";
     }
-    "require": {}
 }

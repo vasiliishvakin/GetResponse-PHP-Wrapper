@@ -100,7 +100,7 @@ class jsonRPCClient
         }
         else
         {
-            throw new UnexpectedValueException('Invalid parameters structure type.');
+            throw new \UnexpectedValueException('Invalid parameters structure type.');
         }
 
         return $this;
@@ -122,7 +122,7 @@ class jsonRPCClient
         }
         else
         {
-            throw new InvalidArgumentException('Invalid options type.');
+            throw new \InvalidArgumentException('Invalid options type.');
         }
 
         return $this;
@@ -204,7 +204,7 @@ class jsonRPCClient
         $ch = curl_init();
         if ( !$ch)
         {
-            throw new RuntimeException('Could\'t initialize a cURL session');
+            throw new \RuntimeException('Could\'t initialize a cURL session');
         }
 
         curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -216,7 +216,7 @@ class jsonRPCClient
 
         if ( !curl_setopt_array($ch, $this->curl_options))
         {
-            throw new RuntimeException('Error while setting curl options');
+            throw new \RuntimeException('Error while setting curl options');
         }
 
         // send the request
@@ -226,12 +226,12 @@ class jsonRPCClient
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         if (isset($this->httpErrors[$httpCode]))
         {
-            throw new RuntimeException('Response Http Error - ' . $this->httpErrors[$httpCode]);
+            throw new \RuntimeException('Response Http Error - ' . $this->httpErrors[$httpCode]);
         }
         // check for curl error
         if (0 < curl_errno($ch))
         {
-            throw new RuntimeException('Unable to connect to '.$this->url . ' Error: ' . curl_error($ch));
+            throw new \RuntimeException('Unable to connect to '.$this->url . ' Error: ' . curl_error($ch));
         }
         // close the connection
         curl_close($ch);
@@ -251,7 +251,7 @@ class jsonRPCClient
     {
         if ($pFailed)
         {
-            throw new RuntimeException($pErrMsg);
+            throw new \RuntimeException($pErrMsg);
         }
     }
 
@@ -275,7 +275,7 @@ class jsonRPCClient
         // get starttime
         $startTime = empty($startTime) ? array_sum(explode(' ', microtime())) : $startTime;
         if (true === $pShow and !empty($debug))
-        {
+        {
             // get endtime
             $endTime = array_sum(explode(' ', microtime()));
             // performance summary
