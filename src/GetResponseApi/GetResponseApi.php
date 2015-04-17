@@ -79,9 +79,10 @@ class GetResponseApi
 	 */
 	public function getAccountFromFields()
 	{
-		$request  = $this->prepRequest('get_account_from_fields');
-		$response = $this->execute($request);
-		return $response;
+		$request  = $this->prepRequest('get_account_info');
+		$response =(array) $this->execute($request);
+		$from = '"' . $response["from_name"] . '"' . '<' . $response["from_email"] . '>';
+		return $from;
 	}
 
 	/**
