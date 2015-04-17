@@ -13,6 +13,6 @@
       }
     },
     "require": {
-        "soundasleep/html2text" : "dev-master";
+        "soundasleep/html2text" : "dev-master"
     }
 }
