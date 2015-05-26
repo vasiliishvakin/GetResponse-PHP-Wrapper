@@ -109,6 +109,15 @@ class GetResponseApi
 		foreach($response as $key => $account) if($account->email!=$email) unset($response->$key);
 		return $response;
 	}
+
+    public function getAccountFromField()
+    {
+        $request = $this->prepRequest('get_account_from_fields');
+        $response = $this->execute($request);
+        foreach($response as $key=>$value) {
+            return $key;
+        }
+    }
 	
 	/**
 	 * Get a list of active campaigns, optionally filtered
